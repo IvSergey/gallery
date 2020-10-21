@@ -21,12 +21,11 @@ const Users = ({ match }) => {
           return (
             <li key={user.id}>
               <NavLink to={`${match.url}user/${user.id}`}>{user.name}</NavLink>
-              {/* <NavLink to="/albums">{user.name}</NavLink> */}
             </li>
           );
         })}
       </ul>
-      <Route path={`${match.path}user/:id`} component={User}></Route>
+      {/* <Route path={`${match.path}user/:id`} component={User}></Route> */}
     </div>
   );
 };

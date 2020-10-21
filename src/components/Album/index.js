@@ -9,12 +9,12 @@ const Album = ({ match }) => {
 
     const [photos, setPhotos] = useState([]);
 
-    console.log(match, 'match');
+    // console.log(match, 'match');
 
     useEffect(() => {
         const getFetch = async () => {
             const result = await axios(baseUrl(`photos?albumId=${match.params.id}`));
-            console.log(result.data.length, '----num===');
+            // console.log(result.data.length, '----num===');
             setPhotos(result.data);
         };
         getFetch();
